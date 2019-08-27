@@ -1,0 +1,12 @@
+#navbar{
+    position: fixed;
+    display: flex
+}
+#navbar ul li{
+    display: inline;
+    margin-right: 2em;
+}
+#navbar ul li a{
+    text-decoration: none;
+    color: black
+}
