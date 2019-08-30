@@ -1,6 +1,27 @@
+*{
+    font-family: 'Roboto Slab', serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
 #navbar{
+    width: 100%;
     position: fixed;
-    display: flex
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#navbar img{
+    width: 7em;
+    height: 7em;
+    margin-left: 2.5em;
+}
+#navbar ul{
+    margin-right: 4em;
+    white-space: nowrap;
 }
 #navbar ul li{
     display: inline;
@@ -9,4 +30,62 @@
 #navbar ul li a{
     text-decoration: none;
     color: black
+}
+@media screen and (max-width: 600px) {
+    #navbar {
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 520px) {
+    #navbar {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 490px){
+    #navbar{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 400px){
+    #navbar ul {
+        padding-left: 20px;
+    }
+}
+@media screen and (max-width: 370px){
+    #navbar ul {
+        font-size: 10px;
+        padding-left: 10px;
+    }
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#main h1 {
+    margin: 0;
+    color: #274690;
+    font-size: 60px;
+}
+#main h3 {
+    margin: 0;
+    color: #1B264F;
+    font-size: 50px;
+}
+#skills{
+    background-color: #F5F3F5;
+    /* width: 100vw; */
+    overflow: hidden
+}
+#skills div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#skills ul {
+    padding: 20px;
+    columns: 2;
 }
