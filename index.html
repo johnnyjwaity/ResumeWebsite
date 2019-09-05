@@ -14,10 +14,10 @@
   <section id="navbar">
     <img src="assets/images/logo.png">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li>Projects</li>
-      <li>Resumé</li>
-      <li>Contact</li>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Resumé</a></li>
+      <li><a href="#">Contact</a></li>
     </ul>
   </section>
   <section id="main">
@@ -26,43 +26,31 @@
       <h1>John&nbsp;Waity</h1>
     </div>
   </section>
-  <section id="skills">
-    <h2>Computer Science Skills</h2>
-    <div>
-      <article>
-        <p>Languages</p>
-        <ul>
-          <li>JavaScript</li>
-          <li>Python</li>
-          <li>PHP</li>
-          <li>Java</li>
-          <li>Swift</li>
-          <li>Objective-C</li>
-          <li>C++</li>
-        </ul>
-      </article>
-      <article>
-        <p>Frameworks/Libraries</p>
-        <ul>
-          <li>React JS</li>
-          <li>Open-GL</li>
-          <li>JQuery</li>
-        </ul>
-      </article>
-      <article>
-        <p>Other</p>
-        <ul>
-          <li>iOS App Development</li>
-          <li>Android App Development</li>
-          <li>Unity</li>
-          <li>Node JS</li>
-          <li>Full Stack Development</li>
-          <li>MySQL</li>
-          <li>MongoDB</li>
-        </ul>
-      </article>
-    </div>
+  <section id="content" style="overflow: auto">
+
   </section>
+  <!-- <article class="sec-container">
+    <h2>Section</h2>
+    <div></div>
+  </article>
+  <article class="sec-container">
+    <h2>Section</h2>
+    <div></div>
+  </article>
+  <article class="sec-container">
+    <h2>Section</h2>
+    <div></div>
+  </article> -->
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script>const e = React.createElement;</script>
+  <script src="assets/components/FeaturedProject.js"></script>
+  <script src="assets/components/Container.js"></script>
+  <script>
+    let featuredContainer = e(Container, { name: "Featured Projects", child: FeaturedProject }, null)
+    ReactDOM.render(featuredContainer, document.getElementById('content'))
+  </script>
 </body>
 
 </html>

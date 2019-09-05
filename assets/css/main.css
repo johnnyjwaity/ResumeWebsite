@@ -1,3 +1,12 @@
+@font-face {
+    font-family: "Amandita";
+    src: url("../fonts/Amandita.ttf");
+}
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
 *{
     font-family: 'Roboto Slab', serif;
 }
@@ -28,9 +37,13 @@ body {
     display: inline;
     margin-right: 2em;
 }
-#navbar ul li a{
+#navbar>ul>li>a{
     text-decoration: none;
-    color: black
+    color: #1B264F;
+
+}
+#navbar>ul>li>a.active{
+    text-decoration: underline;
 }
 @media screen and (max-width: 600px) {
     #navbar {
@@ -76,52 +89,16 @@ body {
     color: #1B264F;
     font-size: 50px;
 }
-#skills{
-    background-color: #FAFAFA;
-    /* width: 100vw; */
-    overflow: hidden
+article:nth-of-type(odd){
+    background-color: #eff3fa
 }
-#skills h2 {
-    color: #1B264F;
-    margin-left: 3em;
-}
-#skills p {
-    color: #274690;
-    font-weight: bold;
-    margin-bottom: 0;
-}
-#skills li{
-    color: #274690;
-}
-#skills div {
+.sec-container{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
+    overflow: auto
 }
-#skills ul {
-    padding: 20px;
-    padding-top: 0;
-}
-@media screen and (max-width: 620px){
-    #skills {
-        font-size: 14px;
-    }
-    #skills h2 {
-        margin-left: 2em;
-    }
-}
-@media screen and (max-width: 520px){
-    #skills div{
-        flex-flow: column nowrap;
-        align-items: stretch
-    }
-}
-@media screen and (max-width: 360px){
-    #skills {
-        font-size: 14px;
-    }
-    #skills h2 {
-        margin-left: 1em;
-    }
+.sec-container>h2 {
+    color: #1B264F;
+    font-size: 40px;
+    margin-top: 0;
+    margin-left: 1em;
 }
