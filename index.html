@@ -14,8 +14,8 @@
   <section id="navbar">
     <img src="assets/images/logo.png">
     <ul>
-      <li><a href="#" class="active">Home</a></li>
-      <li><a href="#">Projects</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
       <li><a href="#">Resumé</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -36,7 +36,40 @@
   <script src="assets/components/FeaturedProject.js"></script>
   <script src="assets/components/Container.js"></script>
   <script>
-    let featuredContainer = e(Container, { name: "Featured Projects", child: FeaturedProject }, null)
+    let featuredProjects = [
+      {
+        name: "Flux",
+        description: "Surverys Made Easy",
+        productLink: "https://tryflux.app",
+        font: "Amandita",
+        fontColor: "#56bcc8",
+        fontSize: "3em",
+        background: "linear-gradient(rgb(68, 153, 243), rgb(112, 241, 135))",
+        icon: "assets/images/flux.png"
+      },
+      {
+        name: "Conant Map",
+        description: "3D Navigation App for Students",
+        productLink: "https://conantmap.com",
+        appStoreLink: "h",
+        // font: "San Francisco",
+        fontColor: "black",
+        fontSize: "2em",
+        background: "linear-gradient(132deg, rgba(18,42,76,1) 30%, rgba(219,30,48,1) 70%)",
+        icon: "assets/images/conantLogo.png"
+      },
+      {
+        name: "Planet Jumpers!",
+        description: "Fun Planet Jumping Game",
+        appStoreLink: "h",
+        googlePlayLink: "h",
+        fontColor: "black",
+        fontSize: "2em",
+        background: "linear-gradient(132deg, rgba(0,0,0,1) 0%, rgba(67,10,77,1) 73%)",
+        icon: "assets/images/planetjumpers.png"
+      }
+    ]
+    let featuredContainer = e(Container, { name: "Featured Projects", child: FeaturedProject, data: featuredProjects }, null)
     ReactDOM.render(featuredContainer, document.getElementById('content'))
   </script>
 </body>
