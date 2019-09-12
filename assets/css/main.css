@@ -94,7 +94,8 @@ article:nth-of-type(odd){
 }
 .sec-container{
     width: 100%;
-    overflow: auto
+    overflow: auto;
+    padding-bottom: 10px;
 }
 .sec-container>h2 {
     color: #1B264F;
