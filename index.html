@@ -49,6 +49,7 @@
   <script>const e = React.createElement;</script>
   <script src="assets/components/FeaturedProject.js"></script>
   <script src="assets/components/Skill.js"></script>
+  <script src="assets/components/Experience.js"></script>
   <script src="assets/components/Container.js"></script>
   <script>
     let featuredProjects = [
@@ -163,7 +164,26 @@
     ]
     let skillsContainer = e(Container, { name: "Skills", child: Skill, data: skills, key: 1 }, null)
 
-    ReactDOM.render([featuredContainer, skillsContainer], document.getElementById('content'))
+    let exp = [
+      {
+        name: "Motorola Internship",
+        description: "Intern at Motorola Solutions. Summer of 2019",
+        background: "linear-gradient(90deg, rgba(9,1,154,1) 0%, rgba(69,160,179,1) 100%)",
+        icon: "assets/images/Motorola.png",
+        radius: "50%",
+        fontSize: "1.5em"
+      },
+      {
+        name: "Hack Chicago",
+        description: "Participant at Hackathon in Chicago",
+        background: "url(assets/images/hackchicago.png)",
+        fontSize: "1.5em"
+      }
+    ]
+
+    let experienceContainer = e(Container, {name: "Experiences", child: Experience, data: exp, key: 2}, null)
+
+    ReactDOM.render([featuredContainer, skillsContainer, experienceContainer], document.getElementById('content'))
   </script>
 </body>
 
