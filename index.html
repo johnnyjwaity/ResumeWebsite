@@ -21,9 +21,25 @@
     </ul>
   </section>
   <section id="main">
-    <div>
-      <h3>I'm</h3>
-      <h1>John&nbsp;Waity</h1>
+    <div id="main-back">
+      <div>
+        <h3>I'm</h3>
+        <h1>John&nbsp;Waity</h1>
+      </div>
+    </div>
+    <div id="sm-block">
+      <div>
+        <input type="image" src="assets/images/facebook.png"
+          onclick="window.open('https://www.facebook.com/profile.php?id=100010423568094')">
+        <input type="image" src="assets/images/twitter.png" onclick="window.open('https://twitter.com/johnnywaity')">
+        <input type="image" src="assets/images/linkedin.png"
+          onclick="window.open('https://www.linkedin.com/in/john-w-bbb402161')">
+        <input type="image" src="assets/images/github.png" onclick="window.open('https://github.com/johnnyjwaity')">
+        <input type="image" src="assets/images/reddit.png"
+          onclick="window.open('https://www.reddit.com/user/johnnyjw')">
+        <input type="image" src="assets/images/instagram.png"
+          onclick="window.open('https://www.instagram.com/johnnywaity/?hl=en')">
+      </div>
     </div>
   </section>
   <section id="content" style="overflow: auto"></section>
@@ -68,9 +84,9 @@
         icon: "assets/images/planetjumpers.png"
       }
     ]
-    let featuredContainer = e(Container, { name: "Featured Projects", child: FeaturedProject, data: featuredProjects }, null)
-    
-    
+    let featuredContainer = e(Container, { name: "Featured Projects", child: FeaturedProject, data: featuredProjects, key: 0 }, null)
+
+
     let skills = [
       {
         name: "HTML",
@@ -107,10 +123,46 @@
       {
         name: "C#",
         icon: "assets/images/csharp.png"
+      },
+      {
+        name: "Swift",
+        icon: "assets/images/swift.png"
+      },
+      {
+        name: "Objective-C",
+        icon: "assets/images/objc.png"
+      },
+      {
+        name: "C++",
+        icon: "assets/images/c++.png"
+      },
+      {
+        name: "MongoDB",
+        icon: "assets/images/mongo.png"
+      },
+      {
+        name: "TI-Basic",
+        icon: "assets/images/ti.png"
+      },
+      {
+        name: "React",
+        icon: "assets/images/react.png"
+      },
+      {
+        name: "Unity",
+        icon: "assets/images/unity.png"
+      },
+      {
+        name: "Node JS",
+        icon: "assets/images/node.png"
+      },
+      {
+        name: "Open-GL",
+        icon: "assets/images/gl.png"
       }
     ]
-    let skillsContainer = e(Container, {name: "Skills", child: Skill, data: skills}, null)
-    
+    let skillsContainer = e(Container, { name: "Skills", child: Skill, data: skills, key: 1 }, null)
+
     ReactDOM.render([featuredContainer, skillsContainer], document.getElementById('content'))
   </script>
 </body>

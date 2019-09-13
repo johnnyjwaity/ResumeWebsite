@@ -12,7 +12,7 @@ class Container extends React.Component {
         let c = e("div", {
             key: 1, style: {
                 display: "flex",
-                justifyContent: "space-around",
+                justifyContent: "space-evenly",
                 flexWrap: "wrap"
             }
         }, elements)
